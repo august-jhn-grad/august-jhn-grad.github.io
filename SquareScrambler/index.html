@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "style.css">
+    <script src = "script.js" defer></script>
+</head>
+<body>
+     
+        <div class = "header">
+            <h1>
+                Square Scrambler
+            </h1>
+        </div>
+        <div class = "content">
+            <div class = "array">
+                
+                <div class = "right">
+                    <h3>
+                        Welcome to Square Scrambler!
+                    </h3>
+                    <p>
+                        You can click on the center square to make a whole bunch of new ones.
+                        Those new squares'll get scrambled if you click on 'em.
+                        <br>
+                        <br>
+                        You can also change the number of squares, and their sizes
+                    </p>
+                </div>
+                <div class = "container">
+                    <div class = "square" onclick = "mouseClickedSquare()"></div>
+                </div>
+                <div class = "left">
+                    <p>Use the slider to change the number of squares</p>
+                    <div class = "sliderContainer">
+                        <input type = "range" class = slider>
+                    </div>
+                    <p>
+                        Squares Alive:
+                    </p>
+                    <p id = "squaresAlive" style = "text-justify: center;">
+                        1
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+</body>
+</html>
