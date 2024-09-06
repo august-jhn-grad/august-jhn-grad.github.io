@@ -1,0 +1,54 @@
+
+
+        
+ <!DOCTYPE html>
+
+ <html>
+ 
+ 
+ <head>
+    <link rel="stylesheet" href = "../../../static/css/post-style.css">
+    <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+ </script>
+ 
+ 
+ </head>
+ <body>
+ <div class = "content">       
+
+    <h1>Permutations, Set-groups, and Cayley's Theorem</h1>
+
+    <p>
+        Group action is one of the most important uses of group theory. 
+
+        <br>
+        <br>
+        <b>Definition. </b> Let \(G\) be a group, let \(S\) be a set. Then a (left) <b>action</b> of \(G\) on \(A\) is a map 
+        \[\alpha:S\times G \to S,  \]
+        which satisfies for any \(g,h\in G, s\in S\)
+        <ul>
+            <li>\(\alpha(s,1) = s\)</li>
+            <li>\(\alpha(\alpha(s,g),h) = \alpha(s,gh)\)</li>
+        </ul>
+        <br>
+        <br>
+        An easy consequence of this definition is that the maps \(\alpha(\_, g):S\to S\) are bijections. To see this, we need only 
+        find a left and right inverse. Well, by the first second of the rules which defines actions, and by the very definition of a group (and the existence of a left and right multiplicative inverse \(g^{-1})\),
+        the map \(\alpha(\_,g^{-1})\) must be a left and right inverse:
+
+        \[\alpha(\alpha(s,g),g^{-1})\ = \alpha(s, gg^{-1}) = \alpha(s,1) = s\]
+
+        In other words, \(\alpha(\_, g)\in \mathbf{Aut}(G)\). Since the automorphism group of a set is the symmetric group, 
+        the action of a group on a 
+        
+        As a consequence, the map \(h:G\to \mathbf{Aut}(G)\)
+    </p>
+
+
+</div>
+
+</body>
+
+</html>
+

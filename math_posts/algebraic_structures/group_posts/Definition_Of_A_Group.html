@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+    <link rel="stylesheet" href = "../../../static/css/post-style.css">
+    <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+</head>
+<body>
+<div class = "content">
+    <h1>Definition of a Group</h1>
+
+    <p>
+        Groups are often introduced as an algebraic abstraction of <b>symmetry</b>. While this is true, it is only part of the picture. In fact
+        groups are probably the richest, most applicable, and most interesting algebraic structures. Symmetry is only one of the things that groups
+        are good for modeling. Groups can be viewed from a variety of angles. Many theorems suggest that groups "are" one thing or another. Representation
+        theory is about groups being transformations over a vector space. Cayley's theorem tells us that groups are permutations on sets. It is probably best to
+        actually start with a definition. After providing the definition, we'll learn a couple of examples. From those examples, we'll find a number of common
+        phenomena. Those common phenomena will be unified through groups, and we will find that all of our observations can be unified through a theory about groups in general. This theory goes by the name of <b>Group Theory</b>.
+
+        <br>
+        <br>
+         The definition of a group is simple, and therein lies the great mystery: how can such a simple construction be so powerful,
+        so rich, and so useful? 
+        
+        <br>
+        <br>
+
+        <b>Definition.</b> Let \(G\) be a set, and let \(\cdot\) be a binary operation <b>on</b> \(G\). Then \((G,\cdot)\) is a <b>group</b> if the following conditions are satisfied
+        <ul>
+            <li>
+                The operation \(\cdot\) is associative (i.e. for any \(g,h,k\in G\) we have \(g\cdot(h\cdot k) = (g\cdot h)\cdot k\) )
+            </li>
+            <li>
+                There is some element \(1\in G\), such that for any \(g\in G\), \(1\cdot g = g\cdot 1 = g\). This element is called the <b>identity</b>.
+            </li>
+            <li>
+                For every element \(g\in G\), there is some other element \(g^{-1}\in G\) such that \(1 = g\cdot g^{-1} = g^{-1}g\). This element is the called the <b>inverse</b>.
+            </li>
+        </ul>
+
+        Some include "closure". This is silly, however, for a binary operation is a function \(G\times G\to G\).
+        <br>
+        <br>
+
+        A number of somewhat interesting properties and equations are immediate consequences of this definition. I'll leave it to whoever's reading this to prove them, if they want something boring to do.
+
+        <ul>
+            <li>
+                The identity is unique (remember the definition of the identity).
+            </li>
+            <li>
+                For a given element, the inverse is unique.
+            </li>
+            <li>
+                If you want to undo the process of taking your shoes off and then your socks off, you've got to first put your socks on and then put shoes on, and vice versa.
+                In other words, given elements \(g,h\in G\), the equation \((gh)^{-1} = h^{-1}g^{-1}\) holds.
+            </li>
+        </ul>
+
+
+        
+
+
+
+</div>
+
+</body>
+
+</html>
+

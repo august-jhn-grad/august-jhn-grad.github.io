@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+
+    <link rel="stylesheet" href = "../post-style.css">
+    <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+</head>
+<body>
+<div class = "content">
+
+    <h1>Isometries</h1>
+    <p>
+
+        We start by defining the Euclidean plane. For us, the Euclidean plane is a particular metric space. It is a particular set, 
+        with a particular distance function on that set.
+
+        <br>
+        <br>
+
+        <b>Definition. </b>
+        The Euclidean plane is the set \(\mathbb{R}^n\), endowed with the metric \(d\), which is defined for 
+        any two points \(\mathbf{p} = (p_1,\dots, p_n), \mathbf{q} = (q_1,\dots, q_n), \) as 
+        \[d(\mathbf{p},\mathbf{q}) = \sqrt{\sum_{i = 1}^n (p_i - q_i)^2}.\]
+        This metric space is denoted as \(\mathbb{E}^n = (\mathbb{R}^n , d).\)
+
+        <br>
+        <br>
+
+        Since the underlying set of Euclidean space is a cartesian product, we can also view Euclidean space as a vector space. Every 
+        point of Euclidean space is some linear combination of the standard basis vectors \(\mathbf{e}_i\)
+
+        \[
+        \mathbf{p} = \sum_{i = 1}^n\mathbf{e}_i
+        \]
+
+        A morphism of metric spaces is, you guessed it, a distance preserving map from one space to another. That is,
+        
+        <br>
+        <br>
+
+        <b>Definition. </b>
+        Let \((X, d_X)\) and \((Y, d_Y)\) be metric spaces. An isometry is a function \(f: X\to Y\) such that for any points \(p,q\in X\),
+        \[d_X(p,q) = d_Y(f(p), f(q)).\] An automorphism \(\alpha:X\to X\) is a bijective isometry whose inverse is an isometry. That is, an automorphism 
+        of a metric space is an isomorphism \(X\cong X\). As always, the automorphisms form a group. This group is denoted \(\mathbf{Aut}(X)\). 
+        <br>
+        <br>
+
+        The automorphism group of a metric space tells you much about the space. The isometry group is such a valuable theoretical tool that 
+        towards the turn of the century, mathematicians such as Felix Klein suggested that geometry ought to center around the 
+        study of such groups. 
+        <br>
+        <br>
+        The group \(\mathbf{Aut}(\mathbb{E}^n)\), for some natural number \(n\), is massive, and rich in structure. I like to think of it as a metropolis of groups, since within each euclidean isometry group 
+        lives a great population of other familiar groups. In fact, we'll show that <b>every</b> finite group appears as a subgroup of some euclidean group!
+         The Euclidean group is not just a group: it is a topological group and a Lie group. 
+        We will always study this group in relation to the obvious action of \(\mathbf{Aut}(\mathbb{E}^n) \) on the plane. An interesting yet obvious result about the structure of any isometry group will soon be obvious.
+        <br>
+        <br>
+        <b>Proposition </b> For any natural numbers \(n \le m\), there is a natural inclusion 
+        \[\mathbf{Aut}(\mathbb{E}^n) \hookrightarrow \mathbf{Aut}(\mathbb{E}^m)\]
+        
+        <br>
+        <br>
+        First, we should define a reflection through the origin and a translation. I will take the analytic approach to geometry. My analysis of the Euclidean group, and the Euclidean plane, will rely heavily on coordinate systems and algebraic manipulations.
+        This will have the benefit of making some things easier to explicitly compute and visualize. 
+
+        <br>
+        <br>
+        <b>Definition. </b> Given a dimension \(n\), a square \(n\times n\) matrix acts on \(\mathbb{E}^n\) 
+    <p>
+</div>
+
+</body>
+
+</html>
+

@@ -1,0 +1,140 @@
+
+
+        
+ <!DOCTYPE html>
+
+ <html>
+ 
+ 
+ <head>
+ 
+    <link rel="stylesheet" href = "../../../static/css/post-style.css">
+    <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+ </script>
+ 
+ 
+ </head>
+ <body>
+ <div class = "content">       
+
+    <h1>The Category of Groups, and Other Categories</h1>
+
+        Now let's talk about <b>all</b> groups at once. To do this, we'll construct the category of groups, and show how this category is "special," in a certain way,
+        among <b>all</b> cagegories. Perhaps this will give insight into what a group really <b>is</b> (whatever is means), as well as why groups are almost worth learning about.
+
+        <br>
+        <br>
+
+        You can imagine, dare I say, should imagine, that a group homomorphism is a function between groups which respects the group operation.
+
+        <br>
+        <br>
+
+        <b>Definition.</b> Let \(G\) and \(H\) be groups. Then \(\phi:G\to H\) is a <b>group homomorphism</b> if and only if a for any group elements \(g_1,g_2\in G\)
+        \[\phi(g_1g_2) = \phi(g_1)\phi(g_2).\]
+
+        As you may have guessed, a <b>group isomorphism</b> is a bijective group homomorphism whose inverse is also a group homomorphism, 
+        though it turns out this last condition is a consequence of the first (which is not the case of continuous maps, for example). If there exists an isomorphism \(\phi:G\to H\),
+        we write \[
+        \require{AMSmath}
+        G\cong H.\]
+
+        Upon a very quick application of the definition, we find taht isomorphism of groups is an equivalence relation. 
+        
+        <br>
+        <br>
+        Since the identity map \(1_G:G\to G\) is a group homomorphism, and since the composition of 
+        group homomorphisms is also a group homomorphism, we can construct the category of groups, \(\mathbf{Grp}\), whose objects are groups, and whose arrows are, well, group homomrophisms.
+        <br>
+
+        In general, 
+        <br>
+        <br>
+        <b>Definition. </b>A category \(\mathcal{C}\)
+        <ul>
+            <li>
+                a collection \(\mathcal{O}\) of objects,
+            </li>
+            <li>
+                a collection \(\mbox{hom}\) of arrows,
+            </li>
+            <li>
+                 mappings \(\mbox{dom},\mbox{codom}:\mbox{hom} \to \mathcal{O}\). 
+            </li>
+            <li>
+                an associative binary operation (called composiition) \(\circ\) which is defined for \(f,g\in \mbox{hom}\) when \(\mbox{cod}(f) = \mbox{dom}(g)\).
+            </li>
+            <li>
+                a map \(1:\mathcal{O} \to \mbox{hom}\) whose images are denoted \(1_O\) for objets \(O\in \mathcal{O}\), which act as identity elements under composition.
+            </li>
+            
+        </ul>
+
+        When \(\mbox{dom}(f) = A\) and \(\mbox{codom}(f) = B\) for \(f\in \mbox{hom}\) and \(A,B\in \mathcal{O}\), we write 
+        \[
+        \require{AMSmath}
+        \def\mapright#1{\xrightarrow{#1}}
+        \def\mapdown#1{\Big\downarrow\rlap{\raise2pt{\scriptstyle{#1}}}}
+        A\mapright{f} B\]
+
+
+        A number of categories have shown up in my previous math classes. These include 
+        <ul>
+            <li>
+                the category \(\mathbf{Set}\) whose objects are sets, and whose morphisms are functions
+            </li>
+            <li>
+                the category \(\mathbf{Top}\) whose objects are topological spaces, and whose morphisms are continuous maps
+            </li>
+            <li>
+                the category \(\mathbf{Grp}\) which we just constructed
+            </li>
+            <li>
+                the category \(\mathbf{Toph}\) whose objects are homotopy equivalence classes of topological spaces, and whose arrows are homotopy equivalence classes of maps 
+            </li>
+            <li>
+                the category \(\mathbf{Quand}\) of quandles
+            </li>
+            <li>
+                the category of metric spaces whose arrows are isometries (we'll be dealing with this one quite a bit)
+            </li>
+        </ul>
+        and the list goes on.
+
+        <br>
+        <br>
+       
+
+        An important equivalence relation, called isomorphism, abstracts from various mathematical concepts such as isomorphism of groups, bijection of sets, homeomorphism, homotopy equivalence of spaces, et. cetera. 
+
+        <br>
+        <br>
+
+        <b>Definition.</b>
+        Suppose I have an arrow \(f:A\to B\), such that there is another arrow \(g:B\to A\) with \(f\circ g = 1_B\) and \(g\circ f = 1_A\). Then \(f\) is an <b>isomorphism</b>.
+        In this case, the objects \(A\) and \(B\) are isomorphic, and we write \(A\cong B\).
+
+        <br>
+        <br>
+
+        Let \(A\) be an object in a category. The operation of function composition is a well defined associative binary operation on the arrows with domain and codomain \(A\). Clearly, \(A\) is isomorphic to itself under \(1_A\), and \(1_A\) acts as the identity under function composition. 
+        Moreover, by definition of an isomorphism, any isomorphism \(f:A\to A\) has an inverse. This means that the set of isomorphisms from an object to itself, in a category, form a group!
+
+        <br>
+        <br>
+
+        <b>Definition.</b> Let \(C = (\mathcal{O}, \mathbf{hom}, \mathbf{1}, \circ)\) be a category. Let \(A\in \mathcal{O}\). 
+        Then the <b>automorphism group</b> of \(A\) is the set \(\mathbf{Aut}(A) = \{f\in \mathbf{hom}: \mathbf{cod}(f) = A = \mathbf{codom}(f)\}\), and with operation 
+        
+        <br>
+        <br>
+        In my opinion, this simple concept makes groups, as an algebraic structure, already interesting. Nonetheless, without further justification, they are no more interesting than monoids and groupoids. They are, at least by some standards. In most interesting categories, the automorphism group tells you a whole lot about an object. Although in some categories it is true, it is not generally true that you can pin down 
+        an object's isomorphism class in a category by pinning down the isomorphism class of a group. As a counterexample, take the category with only two objects, and with only the identity arrows on those objects.
+
+</div>
+
+</body>
+
+</html>
+

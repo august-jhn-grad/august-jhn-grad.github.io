@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+
+    <link rel="stylesheet" href = "../post-style.css">
+    <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+</head>
+<body>
+
+    <h1>
+        Modules as Functor Categories
+    </h1>
+    
+    <div class = "content">
+
+        <p>
+            As all of my non-existent readers know, I've been sporadically "learning" category theory 
+            through the book Categories for the Working Mathematian by Saunder's MacLane. This post 
+            is about my solution to Exercise II.5.1. The statement of the problem is this:
+            <br>
+            <br>
+
+            <b>Exercise. </b> Desribe \(\mathbf{R-Mod}\) as a full subcategory of the functor category \(\mathbf{AbGrp^{R}}\). 
+            <br>
+            <br>
+
+            What I love about this problem is, in part, what I love about MacLane's writing as a whole. He leaves so much 
+            exploration up to the reader. So, I invite you, my reader, into the exploration which I was invited to as a reader.
+            We are both readers, and yet I am also a writer and a reader at the same time. Does that make you a reader 
+            of Saunder's MacLane as a writer, by proxy? Enough of that.
+
+            <br>
+            <br>
+
+            The first step to my solution is simply to say: "wait a minute, how is \(R\)" a category. There are a gazillion ways 
+            of turning a ring into a category. Morallity comes to the rescue. Morally speaking, how <i>should</i> we make 
+            \(R\) into a category, with the goal in mind of turning the functor category \(\mathbf{AbGrp^{R}}\) into the category of \(R\)-modules.
+            <br>
+            <br>
+            
+            Well, among other things, a module is an abelian group, \(A\). It is not more than one of them; it's just one of them.
+            Moreover, an element \(\mathbf{A} \in \mathbf{AbGrp^{R}}\) is a functor, so we are trying to make a functor into a module. 
+            It would drastically ruine our lives if there were more than one abelian group floating around, so how can we 
+            bring only one of them into the picture. The solution cannot lie in a special choice of functors, as we are 
+            are trying to make this into a full subcategory. Every module should appear as a functor, and every functor as a module, somehow.
+            We must make a choice that would constrain our view, in the case of <i>every</i> functor, to only one abelian group.
+
+            <br>
+            <br>
+            <b>Solution. </b> Have only one object in the category \(\mathbf{R}\), when turning \(R\) into a category. Set \(\mathbf{Ob(R)} = \{0\}.\)
+
+            <br>
+            <br>
+
+            We now have figurd out what the objects of \(\mathbf{R}\) are, but we don't yet know what the arrows are. Well, the elements darn better 
+            show up somewhere: let's make 'em the arrows. So 
+            \[\mathbf{Arr(R)} = \{\lambda : 0\to 0; \lambda \in R\}.\]
+
+            Now we've got to figure out how the operations of \(R\) show up. In a module, multiplication in \(R\) has it's role in scalar multiplicatoin. Let's start 
+            by figuring out addition. Let addition show up in composition of arrows, so that the diagram 
+            <object data = "diagrams/figure_0.svg" width="40%" class = "post-content"> </object>
+            <br>
+            commutes. By the ring axioms, this composition is associative. Also, by the ring axioms, \(0:0\to 0\) acts as the identity arrow. We have succesfully turned \(R\), under addition, into a category. 
+            
+            <br>
+            <br>
+            It is also commutative. An interesting observation is now that scalar multiplication is actually a functor from \(\mathbf{R}\) to itself, since if \(\sigma\in R\)\), we have 
+            \[\sigma(\kappa + \lambda) = \sigma\kappa + \sigma\lambda.\] That said, it may be the case that some functors from \(\mathbf{R}\) to itself are not functors. 
+
+            <br>
+            <br>
+
+            I will actually show that <i>any</i> functor \(\mathbf{A}:\mathbf{R} \to \mathbf{AbGrp}\) can be viewed as a module. It may be helpful to review the definition of a module. A module is, roughly speaking, 
+            a ring acting on an abelian group (by a ring I mean a ring with unity).
+            <br>
+            <br>
+            <b>Definition. </b> An \(R\)-module is an abelian group \(A\), with an operation \(\cdot : R\times A \to A\) such that
+            <ul>
+                <li>\((\lambda+\kappa)a = \lambda a + \kappa a\)</li>
+                <li>\(\lambda(a+b) = \lambda a + \lambda b\)</li>
+                <li>\((\lambda\kappa)a = \lambda (\kappa a)\)</li>
+                <li>\(1a = a\)</li>
+            </ul> for any \(a,b\in A, \lambda, \kappa\in R\). Let's knock off these conditions one by one.
+
+            <br>
+            <br>
+            First, how is how ought we to interpret the operation \(\cdot\)? Since \(A\)
+
+
+        </p>
+    </div>
+    
+</body>
+
+
+</html>
+

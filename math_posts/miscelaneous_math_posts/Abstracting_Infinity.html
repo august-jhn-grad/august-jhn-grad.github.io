@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+
+    <link rel="stylesheet" href = "../post-style.css">
+    <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+</head>
+<body>
+
+    <h1>
+        Abstracting Infinity: Part I
+    </h1>
+    
+    <div class = "content">
+
+        This post is an experiment in mathematical abstraction. My ideas here may not be correct. My terminology is most certainly not standard. I urge the reader to 
+        read with the same playful and careless attitude with which I write. After all, this is literally a shower thought which I decided to formalize.
+
+        <br>
+        <br>
+
+        Sets are a particularly interesting category, and for many reasons. One such reason is the sheer number of equivalent descriptions of infiniteness. I want to explore the 
+        ways in which these descriptions diverge when abstracted into other categories such as groups, topological spaces, and categories in general. 
+
+        <br>
+        <br>
+        Let's suppose that the natural numbers exist, \(\mathbb{N}\in \mathbf{Set}\), with some initial element \(0\in \mathbb{N}\), and that there is a successor map \(\sigma:\mathbb{N}\to \mathbb{N}\), and that induction works as it should.
+        I propose using this set to define infinity.
+
+        <br>
+        <br>
+        <b>Definition. </b> A set \(S\) is <b>infinite</b> if there exists an injection \(\mathbb{N}\to S\). 
+
+        <br>
+        <br>
+
+        Obviously, by this definition, the natural numbers are infinite. In this post, the above definition is what "infinite" means. This definition is one among a number of possible alternatives. I list them here, and claim they are equivalent.
+        <br>
+        <br>
+
+        <b>Theorem</b> The following are equivalent for a set \(S\)
+        <ul>
+            <li>\(S\) is infinite</li>
+            <li> There exists some injection \(S\rightarrowtail S\) which is not a bijection. </li>
+            <li> There exists a surjection \(S\rightarrowtail S\) which is not an injection. </li>
+            <li> \(S\) properly contains an isomorphic copy of itself.</li>
+        </ul>
+        
+        <b>Proof</b> 
+        It's probably easiest to start by proving the equivalence of the first two conditions. First, let \(S\) be inifinite. Then there is some injection \(i:\mathbb{N} \to S\). Notice that the successor map \(\sigma\) is itself an 
+      injection but not a surjection (it misses \(0\)). Consider the composition \(i\sigma :\mathbb{N}\to \mathbb{N}\to S\). Clearly \(i\sigma\) is 
+        an injection. Also, \(0\not\in \sigma(\mathbb{N})\). I claim \(i(0)\not\in i\sigma(\mathbb{N})\). For suppose it were. Then \(i(0) = i\sigma(n)\) for some \(n\in \mathbb{N}\). By injectivity,
+        \(0 = \sigma(n)\), which is a contradiction (since \(\sigma\) is the successor map and \(0\) is the initial element). Therefore \(i(0) \not\in i\sigma(\mathbb{N})\), and \(i\sigma\) is not a surjection.
+
+        <br>
+        <br>
+
+        Now suppose that there exists an injection \(f:S\rightarrowtail S\) which is not a surjection. Then there is some element \(x\in S\) which was missed by \(f\). I claim the map 
+        \(s: \mathbb{N}\to S\) defined \(n \mapsto f^n(x)\) where \(f^0 = 1_S\). For suppose we had \(s(n) = s(m)\), such that \(m \ne n\). Without loss of generality, suppose \(n >m\). 
+        Since \(n > m\), we can continually apply injectivity of \(f\), a finite number of times, to obtain 
+        \[x = f^{n-m}(x) = f^{n-m-1}(f(x)),\]
+        so \(x\) was not missed by \(f\): a contradiction. Therefore \(s : \mathbb{N} \rightarrowtail S\) is injective as desired.
+
+        <br>
+        <br>
+        The second and third conditions are obviously equivalent.
+
+        <br>
+        <br>
+        To show that the last condition is equivalent to the rest, first suppose that \(S'\subset S\) is a proper subset. Then the inclusion \(S'\hookrightarrow S\) is an injection which is not a surjection.  
+        Now suppose that there is an injection which is not a surjection, \(i:S\rightarrowtail S\). Then the image set \(i(S) = \{x\in S: x = i(x') \exists x'\in S\}\) is a proper subset of S. 
+        Clearly the constriction of \(i\) to \(i(S)\) is still injective, let's denote it by \(i'\). By construction, \(i'\) is a surjection as well. So we have a bijection \(i' : S\cong i(S)\).  
+
+        <br>
+        <b>Q.E.D.</b>
+
+        <br>
+        <br>
+
+        In the category \(\mathbf{Set}\), we could have defined a set to be infinite when there exists some injection onto itself which is not surjective. In \(\mathbf{Set}\), the monomorphisms are 
+        the injective maps, and the epimorphisms are the surjective maps. To explore the ways in which this definition of inifnity might 
+        abstract to other categories, I propose the following definition. 
+
+        <br>
+        <br>
+        <b>Definition. </b> Let \(\mathcal{C}\) be a category (it need not be concrete). An object \(A\) in \(\mathcal{C}\) is \(\mathcal{C}\)-infinite if and only if 
+        there exists an monomorphism \(f:A\to A\) which is not an epimorphism. 
+
+        <br>
+        <br>
+        This definition extends even to non-concrete categories. For ease of reference, let us call a morphism <i>proper</i> if there it is epi but not monic, or the other way around. If I put a line through an arrow, I mean to say it is proper. Therefore, 
+        by definition of an epimorphism and a monomorphism, an object is \(\mathcal{C}\)-infinite if there is a proper sequence \(A\rightarrowtail A\twoheadrightarrow A\) such that the diagram commutes:
+        
+        <object data = "diagrams/figure.svg" width = "800px" height = "800px"></object>
+    
+        
+        For concrete categories, this definition doesn't always play nicely with the underlying set functor. My first example of this phenomenon is in the category of abelian groups,
+
+        <br>
+        <br>
+        <b>Example. </b> Let \(p_i\) denote the i-th prime number. In \(\mathbf{AbGrp}\), the infinite abelian group
+
+        \[A = \bigoplus_{n\in \mathbb{N}}\mathbb{Z}/p_n\mathbb{Z}\]
+        is not \(\mathbf{AbGrp}\)-infinite. 
+        <br>
+        <br>
+        <b>Proof. </b> Suppose that there is some homomorphism \(\phi: A\to A\) which is a monomorphism yet not an epimorphism. Since \(\phi\) is not a monomorphism, There 
+        is some element \(\mathbf{\alpha} = (\alpha_0, \dots, \alpha_n, \dots)\) such that \(\mathbf{\alpha} \not\in \phi(A)\). Since, by definition of the direct sum, there are only a finite number of 
+        non-zero terms, which have indices \(i_1,\dots, i_k\). Clearly, since we are dealing with primes, each term is relaively prime. Therefore we have 
+        \[o(<\alpha>) = \prod_{j = 1}^{k}p_{i_j} = N. \]
+
+        I claim that the subgroup \(\phi(A)\le A\) has no subgroup of order \(N\). For suppose it did. Then 
+
+        <br>
+        <br>
+
+        There are categories which are not naturally concrete, and in which no objects are infinite. Any groupoid provides an example. 
+
+        <br>
+        <br>
+        As a preview for Part II of this post, I pose the following question. Does there exist some \(\mathbf{AbGrp}\)-infinity determining set like the natural numbers in abelian groups? More precicely,
+        <br>
+        <br>
+        <b>Question. </b>is there an abelian group 
+        \(\mathbb{A}\) such that, for any abelian group \(A'\), there is a sequence \[\mathbb{A}\rightarrowtail A' \twoheadrightarrow \mathbb{A} \] if and only if there is a proper sequence 
+        \[A'\rightarrowtail A' \twoheadrightarrow A' ? \]
+        Hint: I don't think so. 
+
+        
+    </div>
+    
+</body>
+
+
+</html>
+

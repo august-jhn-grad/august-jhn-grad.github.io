@@ -1,0 +1,91 @@
+
+
+        
+ <!DOCTYPE html>
+
+ <html>
+ 
+ 
+ <head>
+ 
+    <link rel="stylesheet" href = "../../../static/css/post-style.css">
+    <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+ </script>
+ 
+ 
+ </head>
+ <body>
+ <div class = "content">       
+
+    <h1>Groups and Other Mathematical Objects</h1>
+
+    <p>
+
+        We would do well not to over-romanticize category theory from the start. Categories are, on their own, not that interesting. The power of the concept,
+        even if only as a stepping stone to other concepts, is through the idea of <b>functors</b>, and mappings between functors called <b>natural transformations</b>.
+        These concepts allow one to treat categories in their own right as mathematical objects, just as group theory allows one to view groups as their own mathematical object. 
+        
+        <br>
+        <br>
+
+        <b>Definition. </b> Let \(\mathcal{C} = (\mathcal{O}, \mathbf{hom}, \mathbf{cod}, \mathbf{codom}, \circ, \mathbf{1}\) and \(\mathcal{C}\) be categories. A functor \(\mathcal{F} = (F_\mathcal{O},F_\mathbf{hom})\) 
+        is a pair of mappings \(F_\mathcal{O} : \)
+
+        <br>
+        <br>
+        Not every important association between categories is naturally a functor. For example, the association which led us to talk about categories in the first place, \(\mathbf{Aut}\) is not naturally functorial.
+        That said, you could make it <b>unnaturally</b> functorial by taking every arrow in \(\mathcal{C}\) \(A\to B\) to the arrow \(\alpha\in \mathbf{Aut}(A)\mapsto 1_B\in \mathbf{Aut}(B)\). 
+        I leave it to you to decide whether or not this is an interesting construction (it isn't). The point is, even if you <b>could</b> regard \(\mathbf{Aut}\) as a functor, the question remains,
+        would it lead to any greater insight? I think not. Nonetheless, the association \(\mathbf{Aut}\) will make it's appearence all over the place, for example, in the next section on <b>symmetric groups</b>.
+        As a preview, we have:
+        <ul>
+            <li>
+                \(S_n = \mathbf{Aut}(\mathbf{n})\) for a finite set \(\mathbf{n} = \{1,\dots, n\}\in \mathbf{Set_f}\), called the <b>symmetric group on \(n\) letters,</b>
+            </li>
+            <li>
+                \(\mathbf{Aut}(G)\) for a group \(G\)
+            </li>
+            <li>
+                \(GL(V) = \mathbf{Aut}(V)\) for a vector space \(V\) over a given field (this actually does turn out to be naturally functorial),
+            </li>
+            <li>
+                \(\mathbf{Aut}(X)\) for a given metric space, and where the arrows are isometries. For example, we'll explore the isometries of the Euclidean plane, and it's finite subgroups, and more generally it's discrete subgroups.
+                This will allow us to classify regular polytopes, regular tesselations of the plane and higher dimensional analogues, as well as "euclidean manifolds". 
+            </li>
+        </ul>
+        <br>
+        <br>
+
+        Some of the associations with groups which <b>are</b> functors, and which are interesting to us, are
+        <ul>
+            <li>
+                the forgetful functor \(\mathcal{U} : \mathbf{Grp} \to \mathbf{Set}\) which maps \((G,\cdot)\in \mathbf{Grp}\to G\in \mathbf{Set}\)
+            </li>
+            <li>
+                \(\pi_1:\mathbf{PCTop}\to \mathbf{Grp} \) from path-connected topological spaces to groups. 
+            </li>
+            <li>
+
+            </li>
+            <li>
+                the inner automorphism group of a rack, \(\mathbf{Inn}:\mathbf{Rack}\to \mathbf{Grp}\), which it turns out is unique to the rack structure, and closely related to
+            </li>
+            <li>
+                the inner automorphism group of a group, \(\mathbf{Inn}:\mathbf{Grp}\to \mathbf{Grp}\)
+            </li>
+            <li>
+                the <a href = "Quandles.html">quandle</a> of group conjugation, \(\mathbf{Conj}:\mathbf{Grp} \to \mathbf{Quand}\)
+            </li>
+        </ul>
+
+
+
+    </p>
+
+</div>
+
+</body>
+
+</html>
+
