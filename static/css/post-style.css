@@ -1,0 +1,20 @@
+
+
+h1{
+    font-size: 40pt;
+    color: rgb(255, 218, 148);
+}
+
+.content {
+    font-size: 120%;
+    padding-left: 10%;
+    width : 90%;
+    float: center;
+    color: rgb(231, 255, 194)
+}
+
+a {
+    color : rgb(179, 255, 149);
+    font-size: 20px;
+    background-color: rgb(52, 35, 1);
+}
