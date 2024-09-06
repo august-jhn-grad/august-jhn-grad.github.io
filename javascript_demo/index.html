@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "script.js"></script>
+    <link rel = "stylesheet" href = "style.css">
+    <title>Demo</title>
+</head>
+<body>
+
+    <div class = "demo1">
+    <h1>
+        This is a demo!
+    </h1>
+    <p>
+        Javascript can change the style of objects in the document.
+    </p>
+    <h2>
+        You can toggle dark mode by presseing this button
+    </h2>
+    <button onclick="toggleDarkMode()" class = "button">Toggle Dark Mode</button>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan lectus eu finibus pellentesque. Quisque ultricies vel felis id sollicitudin. Sed sed fringilla nibh, eu tristique justo. Mauris aliquet sed nunc at condimentum. Maecenas in purus a erat iaculis porttitor et vitae urna. Suspendisse volutpat nisl justo, id vulputate tortor pretium in. Duis consequat purus est, sit amet lobortis ipsum commodo vel. Etiam sit amet pharetra nulla.
+
+Integer gravida augue nec commodo malesuada. Morbi sit amet dui nec ante volutpat dictum. Phasellus libero augue, consectetur sit amet ante non, faucibus blandit sem. Donec vehicula dolor at tortor porta rhoncus. Nam efficitur sem tortor, eget tempor dui interdum quis. Duis suscipit non enim iaculis sollicitudin. Suspendisse id magna pellentesque, pellentesque sem vel, elementum velit. Nam facilisis blandit diam quis vestibulum. Fusce id risus nec nunc imperdiet pretium. Fusce laoreet purus massa, ut pulvinar justo maximus eu. Aliquam dictum id sem vitae sodales. Duis suscipit felis vel pellentesque tincidunt. Nulla leo eros, efficitur ut turpis sed, malesuada eleifend nunc. Nam ultrices mollis velit, ut tempus mauris ultricies non. Duis gravida, diam non cursus dapibus, arcu tellus venenatis tortor, vel dignissim sapien purus nec mauris. Donec at semper velit, at posuere libero.
+
+Duis fermentum dapibus justo. Suspendisse fermentum tempor erat, in euismod enim maximus maximus. Nulla consequat, velit ac viverra dapibus, ipsum dolor molestie lacus, sit amet volutpat metus nibh ac justo. Phasellus volutpat lacus luctus blandit elementum. Vestibulum accumsan, eros ut malesuada interdum, eros lacus pellentesque felis, id vestibulum lectus libero a mauris. Donec tempus quis elit a rutrum. Mauris semper sapien nec sem faucibus, et vestibulum felis bibendum. Vivamus lorem mauris, imperdiet at blandit sit amet, volutpat id urna. Fusce malesuada magna at magna vestibulum, ac fermentum leo mattis. Donec suscipit placerat condimentum. Suspendisse finibus sed sapien vel molestie. Suspendisse non magna velit. Pellentesque vel est magna. Nunc consequat velit in neque ornare porttitor. Aenean pulvinar nulla nec suscipit vestibulum.
+
+Nullam fermentum sem eros, nec rhoncus justo facilisis a. Morbi orci mi, iaculis vitae fermentum non, dictum feugiat risus. Nam eu ex sed tellus vestibulum sollicitudin. Curabitur libero metus, ultrices ac ex in, vehicula egestas elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed vitae metus dictum, dictum purus eget, sodales magna. Aenean eu diam nisl. Fusce facilisis metus in malesuada hendrerit. Praesent vehicula, nibh a fermentum ullamcorper, purus dui commodo mauris, in ornare nisi risus nec nisi. Vestibulum imperdiet, leo eu laoreet congue, tortor arcu scelerisque quam, id ultrices quam risus at ante. Quisque placerat viverra laoreet.
+
+Donec in rutrum purus. Mauris ut imperdiet nibh, laoreet maximus dolor. Nunc a mattis velit. Cras maximus egestas nisi ac pellentesque. Donec eget pellentesque eros. Curabitur condimentum est eu dui dapibus fermentum. Donec risus tellus, laoreet lacinia elementum vel, tempus eget lorem. Etiam non aliquet nisi, et fermentum dolor. Ut vel ante id enim tristique dignissim. Duis diam nibh, dignissim ac sagittis sed, eleifend id urna. Mauris tempus nulla nec sodales sagittis. Ut consectetur est est, id tristique metus tempor vitae. Etiam eu vehicula sem, sed aliquam velit. Duis eget tellus iaculis, ullamcorper dolor eget, porta augue. Fusce at ante a nibh fermentum sagittis.
+    </p>
+
+</div>
+
+    <h2>
+        Press the button below to change the square's color
+    </h2>
+
+    <button onclick = "changeSquareColor()">Change Color</button>
+
+    <form id = "changeSquareColor">
+        Enter a color here: <input type = "text" name = "color">
+
+    </form>
+    <br>
+    <br>
+
+    <div class = "square" id = "changeableSquare"></div>
+    <br>
+
+
+    <h2>
+        Finally, Javascript can upload files and create HTML elements!
+    </h2>
+
+    <p>
+        To demonstrate this, let's create a tool for uploading and viewing images.
+    </p>
+
+    <input type = "file" id = "imgInput" />
+
+
+    <br>
+    
+
+    <button onclick = "viewImage()">View Image</button>
+    
+    <br>
+
+    
+    <output></output>
+
+
+    <h2>To see how all of this works behind the scenes, press <b>F12</b> to open <i>inspect element</i> on your browser.</h2>
+</body>
+</html>
